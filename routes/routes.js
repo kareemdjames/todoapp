@@ -7,7 +7,7 @@ todosRouter.get('/', todoscontroller.index);
 
 
 
-
+todosRouter.get('/:id', todoscontroller.show);
 
 
 module.exports = todosRouter;
