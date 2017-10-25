@@ -3,6 +3,6 @@ const todosRouter = express.Router();
 
 const todoscontroller = require('../controllers/controller');
 
-todoscontroller.get('/', todoscontroller.index);
+todosRouter.get('/', todoscontroller.index);
 
 module.exports = todosRouter;
