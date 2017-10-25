@@ -1,14 +1,17 @@
 <% include ../partials/boilerplate %>
 
-<div class="todos-container">
-    <% todos.forEach(todo => { %>
+<div class="todo-single-container">
     <div class="todo">
         <%= todo.title %>
         <%= todo.category %>
         <%= todo.description %>
     </div>
-    <% }) %>
+
+    <a class="linktosingle" href="/todos">Back to all todos</a>
+
 </div>
 
-<% include ../partials/boilerplate %>
 
+
+
+<% include ../partials/end %>

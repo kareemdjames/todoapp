@@ -5,7 +5,7 @@ const todoController = {};
 todoController.index = (req,res) => {
   Todo.findAll()
     .then(todos => {
-      res.status(200).render('todos/todos-index', {
+      res.status(200).render('todos/todos-index.ejs', {
         todos: todos,
       });
     }).catch(err => {
@@ -15,9 +15,9 @@ todoController.index = (req,res) => {
 }
 
 todoController.show = (req, res) => {
-  todo.findById(req.params.id)
+  Todo.findByID(req.params.id)
     .then(todo => {
-      res.status(200).render('todos/todos-show.ejs', {
+      res.status(200).render('todos/todos-show1.ejs', {
         todo: todo,
       });
     }).catch(err => {
