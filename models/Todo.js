@@ -13,4 +13,12 @@ Todo.findByID = id => {
     WHERE id = $1`, [id] );
 };
 
+Todo.create = todo => {
+  return db.one(
+    `INSERT INTO todo
+    (title, category, description, status)
+    VALUES ($1, $2, $3, $4)
+    RETURNING *`, [todo.title, todo.category, todo.description, todo.status]);
+};
+
 module.exports = Todo;

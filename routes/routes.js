@@ -5,6 +5,12 @@ const todoscontroller = require('../controllers/controller');
 
 todosRouter.get('/', todoscontroller.index);
 
+todosRouter.get('/new', (req, res) => {
+  res.render('todos/todos-new');
+});
+
+todosRouter.post('/', todoscontroller.create);
+
 
 
 todosRouter.get('/:id', todoscontroller.show);

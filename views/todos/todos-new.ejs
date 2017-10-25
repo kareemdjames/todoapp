@@ -1,0 +1,18 @@
+<% include ../partials/boilerplate %>
+
+<div class="form-page" xmlns="http://www.w3.org/1999/html">
+    <div class="add">
+        <form action="/todos" method="POST">
+            <input type="text" name="title" placeholder="Title" />
+            <input type="text" name="category" placeholder="Category" />
+            <input type="text" name="status" placeholder="Status" />
+            <textarea type="text" name="description" placeholder="Description" /></textarea>
+            <input type="submit" value="Add it!" />
+        </form>
+    </div>
+
+    <a href="/todos">Back to all todos</a>
+
+</div>
+
+<% include ../partials/end %>
