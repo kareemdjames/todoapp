@@ -5,7 +5,7 @@ const todoController = {};
 todoController.index = (req,res) => {
   Todo.findAll()
     .then(todos => {
-      res.status(200).render('/todos/todos-index', {
+      res.status(200).render('todos/todos-index', {
         todos: todos,
       });
     }).catch(err => {

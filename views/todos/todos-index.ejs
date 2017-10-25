@@ -1,0 +1,13 @@
+<% include ../partials/boilerplate %>
+
+<div class="todos-container">
+    <% todos.forEach(todo => { %>
+    <div class="todo">
+        <%= todo.title %>
+        <%= todo.category %>
+        <%= todo.description %>
+    </div>
+    <% }) %>
+</div>
+
+<% include ../partials/end %>
