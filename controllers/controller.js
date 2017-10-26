@@ -77,7 +77,4 @@ todoController.delete = (req, res) => {
   });
 };
 
-
-
-
 module.exports = todoController;

@@ -8,17 +8,19 @@
     <div class="btndiv">
         <a href="/todos/new">Add New Todo</a>
     </div>
+
+    <% todos.forEach(todo => { %>
     <div class="todos-container">
-        <% todos.forEach(todo => { %>
         <div id="top">
-            <%= todo.title %>
-            <%= todo.status %>
+            <p><%= todo.title %></p>
+            <p><%= todo.status %></p>
         </div>
         <div id="bottom">
-            <%= todo.category %>
+            <p><%= todo.category %></p>
         </div>
-        <% }) %>
     </div>
+    <% }) %>
+
 </div>
 <% include ../partials/footer %>
 <% include ../partials/boilerplate %>

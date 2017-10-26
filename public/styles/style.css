@@ -20,6 +20,7 @@ header {
   justify-content: space-around;
   padding: 10px 50px;
   border-bottom: 3px solid blue;
+  width: 100%;
 }
 
 header nav ul {
@@ -44,6 +45,7 @@ header nav ul li a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-y: scroll;
 }
 
 .welcome-wrap {
@@ -55,10 +57,23 @@ header nav ul li a {
 .todos-container {
   display: flex;
   flex-direction: column;
+  width: 250px;
+  margin: 10px;
 }
 
+.todos-container div {
+  border: 1px solid black;
+}
 
+#top {
+  display: flex;
+  justify-content: space-around;
+}
 
+#bottom {
+  display: flex;
+  justify-content: space-around;
+}
 
 
 
