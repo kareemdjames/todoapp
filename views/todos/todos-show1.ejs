@@ -1,21 +1,18 @@
 <% include ../partials/boilerplate %>
+    <div class="todo-single-container">
+        <div class="todo">
+            <%= todo.title %>
+            <%= todo.category %>
+            <%= todo.description %>
+            <a class="editlink" href="/todos/<%= todo.id %>/edit1">Edit</a>
+            <form class="delete" action="/todos/<%= todo.id %>?_method=DELETE" method="POST">
+                <input type="submit" class="dellink" value="Delete">
+            </form>
+        </div>
 
-<div class="todo-single-container">
-    <div class="todo">
-        <%= todo.title %>
-        <%= todo.category %>
-        <%= todo.description %>
-        <a class="editlink" href="/todos/<%=todo.id%>/edit1">Edit</a>
-        <form class="delete" action="/todos/<%= todo.id %>?_method=DELETE" method="POST" >
-            <input type="submit" class="dellink" value="Delete">
-        </form>
+        <a class="linktosingle" href="/todos">Back to all todos</a>
+
     </div>
-
-    <a class="linktosingle" href="/todos">Back to all todos</a>
-
-</div>
-
-
 
 
 <% include ../partials/end %>

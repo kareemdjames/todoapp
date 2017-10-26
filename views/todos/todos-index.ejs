@@ -1,16 +1,25 @@
 <% include ../partials/boilerplate %>
-<div class="btndiv">
-    <a href="/todos/new">Add New Todo</a>
-</div>
-<div class="todos-container">
-    <% todos.forEach(todo => { %>
-    <div class="todo">
-        <%= todo.title %>
-        <%= todo.category %>
-        <%= todo.description %>
-    </div>
-    <% }) %>
-</div>
+<% include ../partials/nav %>
+<div class="body-flex">
+    <form method="link" action="/todos">
+        <input type="submit" value="Add New Todo"/>
+    </form>
 
+    <div class="btndiv">
+        <a href="/todos/new">Add New Todo</a>
+    </div>
+    <div class="todos-container">
+        <% todos.forEach(todo => { %>
+        <div id="top">
+            <%= todo.title %>
+            <%= todo.status %>
+        </div>
+        <div id="bottom">
+            <%= todo.category %>
+        </div>
+        <% }) %>
+    </div>
+</div>
+<% include ../partials/footer %>
 <% include ../partials/boilerplate %>
 
