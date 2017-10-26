@@ -67,6 +67,15 @@ todoController.update = (req, res) => {
   });
 };
 
+todoController.delete = (req, res) => {
+  Todo.destroy(req.params.id)
+    .then(() => {
+      res.redirect('/todos');
+    }).catch(err => {
+    console.log(err);
+    res.status(500).json({error: err});
+  });
+};
 
 
 

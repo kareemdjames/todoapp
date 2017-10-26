@@ -14,6 +14,6 @@ todosRouter.post('/', todoscontroller.create);
 todosRouter.get('/:id', todoscontroller.show);
 todosRouter.get('/:id/edit1', todoscontroller.edit);
 todosRouter.put('/:id', todoscontroller.update);
-
+todosRouter.delete('/:id', todoscontroller.delete);
 
 module.exports = todosRouter;
