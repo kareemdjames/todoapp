@@ -9,6 +9,10 @@ body {
 }
 
 /*Header*/
+.head-wrap {
+  display: flex;
+  justify-content: center;
+}
 
 header {
   display: flex;
@@ -21,6 +25,17 @@ header {
 header nav ul {
   display: flex;
   box-sizing: border-box;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+header nav ul li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 .body-flex {
