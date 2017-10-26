@@ -1,0 +1,18 @@
+<% include ../partials/boilerplate %>
+
+<div class="form-page" xmlns="http://www.w3.org/1999/html">
+    <div class="edit">
+        <form action="/todos/<%= todo.id %>?_method=PUT" method="POST">
+            <input type="text" name="title" placeholder="Title" value="<%= todo.title %>" />
+            <input type="text" name="category" placeholder="Category" value="<%= todo.category %>" />
+            <textarea type="text" name="description" placeholder="Description"><%= todo.description %></textarea>
+            <input type="text" name="status" placeholder="Status" value="<%= todo.status %>" />
+            <input type="submit" value="Edit it!" />
+        </form>
+    </div>
+
+    <a href="/todos/<%= todo.id %>">Back to todo</a>
+
+</div>
+
+<% include ../partials/end %>

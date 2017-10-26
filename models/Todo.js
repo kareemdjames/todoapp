@@ -21,4 +21,21 @@ Todo.create = todo => {
     RETURNING *`, [todo.title, todo.category, todo.description, todo.status]);
 };
 
+Todo.update = (todo, id) => {
+  return db.one(
+    `UPDATE todo SET
+    title = $1,
+    category = $2,
+    description = $3,
+    status = $4 
+    WHERE id = $5
+    RETURNING *`, [todo.title, todo.category, todo.description, todo.status, id]);
+};
+
+Todo.destroy = id => {
+  return db.none(
+    `DELETE FROM todo
+    WHERE id = $1`, [id]);
+};
+
 module.exports = Todo;
