@@ -1,9 +1,9 @@
 <% include ../partials/boilerplate %>
     <div class="todo-single-container">
         <div class="todo">
-            <%= todo.title %>
-            <%= todo.category %>
-            <%= todo.description %>
+            <p><%= todo.title %></p>
+            <p>Status: <%= todo.status %></p>
+            <p><%= todo.description %></p>
             <a class="editlink" href="/todos/<%= todo.id %>/edit1">Edit</a>
             <form class="delete" action="/todos/<%= todo.id %>?_method=DELETE" method="POST">
                 <input type="submit" class="dellink" value="Delete">

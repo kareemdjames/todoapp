@@ -17,6 +17,9 @@
         </div>
         <div id="bottom">
             <p><%= todo.category %></p>
+            <a href="/todos/<%= todo.id %>"><button type="submit">info</button></a>
+            <a href="/todos/<%= todo.id %>/edit1"><button type="submit">edit</button></a>
+            <a href="/todos/<%= todo.id %>?_method=DELETE"><button type="submit">delete</button></a>
         </div>
     </div>
     <% }) %>
